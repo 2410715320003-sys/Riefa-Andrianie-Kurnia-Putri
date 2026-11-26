@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Diri</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f0f4f8;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #4a6cf7;
+      margin: 25px 0 12px;
+      border-bottom: 2px solid #e5e9f2;
+      padding-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+
+    table td:first-child {
+      width: 200px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .galeri-foto {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .galeri-foto img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #4a6cf7;
+    }
+
+    .galeri-video {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .video-item {
+      border: 3px solid #4a6cf7;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .video-item iframe {
+      width: 100%;
+      height: 220px;
+      border: none;
+      display: block;
+    }
+
+    .hobi {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hobi span {
+      background: #4a6cf7;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 700px) {
+      .galeri-foto {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .galeri-video {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Biodata Diri</h1>
+
+    <h2>Data Pribadi</h2>
+    <table>
+      <tr>
+        <td>Nama</td>
+        <td>Masukkan nama kamu</td>
+      </tr>
+      <tr>
+        <td>Tempat, Tanggal Lahir</td>
+        <td>Kota, 1 Januari 2005</td>
+      </tr>
+      <tr>
+        <td>Alamat</td>
+        <td>Jl. Contoh No. 123, Kota, Provinsi</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>emailkamu@example.com</td>
+      </tr>
+    </table>
+
+    <h2>Galeri Foto</h2>
+    <div class="galeri-foto">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 4">
+      <img src="foto5.jpg" alt="Foto 5">
+    </div>
+
+    <h2>Galeri Video</h2>
+    <div class="galeri-video">
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_1"
+          title="Video 1"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          title="Video 2"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_3"
+          title="Video 3"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_4"
+          title="Video 4"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_5"
+          title="Video 5"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <h2>Hobi</h2>
+    <div class="hobi">
+      <span>Membaca</span>
+      <span>Ngoding</span>
+      <span>Main Game</span>
+      <span>Olahraga</span>
+      <span>Mendengar Musik</span>
+    </div>
+  </div>
+</body>
+</html>
