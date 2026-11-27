@@ -163,19 +163,39 @@ h2 {
 .btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
 .btn.utama { background: var(--pink-deep); color: #fff; font-size: 1.1rem; padding: 11px 34px; }
 
-/* ---------- kertas form ---------- */
-.kertas {
-  position: relative; background: var(--cream); border: 3px solid var(--ink);
-  border-radius: 8px 26px 8px 26px; padding: 34px 28px 28px; box-shadow: 6px 6px 0 var(--pink);
-}
-.kertas .tape { width: 100px; }
-.field { margin-bottom: 18px; }
-.field > label, .field > .lbl { display: block; font-family: 'Caveat', cursive; font-size: 1.45rem; color: var(--pink-deep); margin-bottom: 2px; }
-.field input[type=text], .field input[type=email], .field input[type=tel],
-.field input[type=date], .field select, .field textarea {
-  width: 100%; font-family: inherit; font-size: 1rem; color: var(--ink);
-  padding: 10px 14px; background: #fff; border: 3px solid var(--ink); border-radius: 14px;
-}
+  <!-- =====================================================
+       SUBPAGE 3 : FORM BIODATA  (id="form")
+       Isi: Google Form + tampilan respons (spreadsheet)
+       ===================================================== -->
+  <section class="page" id="form">
+    <h2>Isi biodata</h2>
+    <p class="sub">isi datamu lewat form di bawah ini ya</p>
+
+    <!-- ===== Google Form biodata ===== -->
+    <!-- Ganti link di src kalau mau pakai Google Form lain
+         (pakai link yang berakhiran /viewform) -->
+    <div class="kertas" style="padding:14px">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc6gN1g_Mi25hTYS3z_6q-XRhh_cKiS1nFU1mP35lHQoNQmnw/viewform?embedded=true"
+        width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0"
+        title="Form Biodata" loading="lazy">
+        Memuat…
+      </iframe>
+    </div>
+
+    <!-- ===== Respons form (spreadsheet live) ===== -->
+    <h2>Respons form</h2>
+    <p class="sub">data yang masuk bakal muncul di tabel ini</p>
+
+    <div class="kertas" style="padding:14px">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5l5wNE60o7g_1YBmJB8TqiyJ7608fHqeQJ8CDVmEB-yA2OBnG8II5IZ2jVS8HJnJL9l8Hg93UVW_M/pubhtml?widget=true&amp;headers=false"
+        width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
+        title="Respons Form Biodata" loading="lazy">
+        Memuat…
+      </iframe>
+    </div>
+  </section>
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--pink-deep); box-shadow: 3px 3px 0 var(--pink); }
 .field textarea { min-height: 90px; resize: vertical; }
 .baris { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 18px; }
