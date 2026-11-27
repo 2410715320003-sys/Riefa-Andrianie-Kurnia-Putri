@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UBAH DI SINI: judul tab browser -->
   <title>Halaman Riefa</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* ===== Bagian CSS ini tidak perlu diubah kecuali mau ganti warna ===== */
     :root {
       --bg: #ffe3d3; --dot: #ffcdbb; --pink: #ff9fb8; --pink-deep: #d9577d;
       --cream: #fff8f1; --butter: #ffe9a8; --ink: #6b2f45;
@@ -29,7 +31,6 @@
       opacity: .9; transform: translateX(-50%) rotate(-4deg);
     }
 
-    /* ---------- header & menu ---------- */
     .judul { text-align: center; margin-bottom: 18px; }
     .judul h1 {
       display: inline-block; font-size: 2.2rem; font-weight: 600;
@@ -58,7 +59,6 @@
     .page > h2:first-child { margin-top: 6px; }
     .sub { font-family: 'Caveat', cursive; font-size: 1.6rem; color: var(--pink-deep); margin-bottom: 18px; }
 
-    /* ---------- beranda ---------- */
     .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 10px; }
     .menu-card {
       position: relative; text-decoration: none; color: var(--ink);
@@ -75,7 +75,6 @@
     .menu-card h3 { font-size: 1.3rem; margin: 6px 0 4px; }
     .menu-card p { font-family: 'Caveat', cursive; font-size: 1.35rem; color: var(--pink-deep); }
 
-    /* ---------- biodata ---------- */
     .notes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
     .note {
       position: relative; background: var(--cream); border: 3px solid var(--ink);
@@ -146,7 +145,6 @@
     .aksi { display: none; flex-direction: column; gap: 10px; }
     .aksi.tampil { display: flex; }
 
-    /* ---------- tombol & form ---------- */
     .btn {
       font-family: inherit; font-size: 1rem; font-weight: 500; padding: 9px 24px;
       background: var(--butter); color: var(--ink); border: 3px solid var(--ink);
@@ -174,7 +172,6 @@
     .pilihan label { font-size: 1rem; color: var(--ink); cursor: pointer; display: flex; align-items: center; gap: 6px; }
     .pilihan input { accent-color: var(--pink-deep); width: 18px; height: 18px; }
 
-    /* bintang survei */
     .bintang { display: inline-flex; flex-direction: row-reverse; gap: 2px; }
     .bintang input { display: none; }
     .bintang label {
@@ -186,12 +183,10 @@
     .aspek { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 16px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px dotted var(--dot); }
     .aspek span { font-weight: 500; }
 
-    /* hasil survei */
     .hasil { display: none; text-align: center; margin-top: 26px; }
     .hasil.tampil { display: block; }
     .hasil .skor { font-size: 3.4rem; font-weight: 600; color: var(--pink-deep); }
 
-    /* tugas akhir */
     .progres { height: 24px; border: 3px solid var(--ink); border-radius: 20px; background: #fff; overflow: hidden; margin: 6px 0 4px; }
     .progres div { height: 100%; width: 0; background: repeating-linear-gradient(45deg, var(--pink) 0 10px, var(--pink-deep) 10px 20px); transition: width .3s; }
     .cek { display: flex; flex-direction: column; gap: 10px; }
@@ -200,7 +195,6 @@
     .cek label.selesai span { text-decoration: line-through; opacity: .6; }
     .file-nama { font-family: 'Caveat', cursive; font-size: 1.4rem; margin-left: 10px; }
 
-    /* toast */
     #toast {
       position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 100px);
       background: var(--pink-deep); color: #fff; border: 3px solid var(--ink);
@@ -220,8 +214,10 @@
 <body>
 <div class="wrap">
 
+  <!-- UBAH DI SINI: judul besar di bagian atas -->
   <div class="judul"><h1>Halaman Riefa</h1></div>
 
+  <!-- UBAH DI SINI (opsional): nama tombol menu. Jangan ubah isi href="#..." dan data-p -->
   <nav id="nav">
     <a href="#beranda" data-p="beranda">Beranda</a>
     <a href="#biodata" data-p="biodata">Biodata</a>
@@ -233,6 +229,7 @@
   <!-- ================= BERANDA ================= -->
   <section class="page" id="beranda">
     <h2>Mau ke mana?</h2>
+    <!-- UBAH DI SINI (opsional): emoji, judul <h3>, dan tulisan tangan <p> di tiap kartu -->
     <div class="menu-grid">
       <a class="menu-card" href="#biodata"><i class="tape"></i><div class="emoji">📒</div><h3>Biodata Diri</h3><p>kenalan sama aku yuk</p></a>
       <a class="menu-card" href="#form"><i class="tape"></i><div class="emoji">✏️</div><h3>Form Pengisian Biodata</h3><p>isi datamu di sini</p></a>
@@ -244,6 +241,7 @@
   <!-- ================= 1. BIODATA ================= -->
   <section class="page" id="biodata">
     <h2>Tentang aku</h2>
+    <!-- UBAH DI SINI: isi data pribadi (teks di dalam tag <b>). Jangan ubah id="..." -->
     <div class="notes">
       <div class="note"><i class="tape"></i><small>Nama</small><b id="bNama">Riefa Andrianie Kurnia Putri</b></div>
       <div class="note"><i class="tape"></i><small>Lahir di</small><b id="bLahir">Palangkaraya, 30 Mei 2006</b></div>
@@ -254,75 +252,9 @@
     </div>
 
     <h2>Galeri foto</h2>
+    <!-- UBAH DI SINI: src="..." harus persis sama dengan nama file fotomu (termasuk .jpg / .jpeg).
+         Teks di <span> adalah tulisan di bawah polaroid.
+         Kalau fotomu kurang dari 5, hapus baris polaroid yang tidak dipakai. -->
     <div class="polaroid-wrap">
       <div class="polaroid"><i class="tape"></i><img src="rumah3.jpeg" alt="Foto 1"><span>kenangan 1</span></div>
-      <div class="polaroid"><i class="tape"></i><img src="rumah2.jpg" alt="Foto 2"><span>kenangan 2</span></div>
-      <div class="polaroid"><i class="tape"></i><img src="kolam.jpeg" alt="Foto 3"><span>kolam</span></div>
-      <div class="polaroid"><i class="tape"></i><img src="rumah4.jpeg" alt="Foto 4"><span>kenangan 4</span></div>
-      <div class="polaroid"><i class="tape"></i><img src="rumah1.jpeg" alt="Foto 5"><span>kenangan 5</span></div>
-    </div>
-
-    <h2>Galeri video</h2>
-    <div class="tv-wrap">
-      <div class="tv"><video src="Vid halaman.mp4" controls preload="metadata"></video><p>video 1</p></div>
-      <div class="tv"><iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video 2" allowfullscreen loading="lazy"></iframe><p>video 2</p></div>
-      <div class="tv"><iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Video 3" allowfullscreen loading="lazy"></iframe><p>video 3</p></div>
-      <div class="tv"><iframe src="https://www.youtube.com/embed/VIDEO_ID_4" title="Video 4" allowfullscreen loading="lazy"></iframe><p>video 4</p></div>
-      <div class="tv"><iframe src="https://www.youtube.com/embed/VIDEO_ID_5" title="Video 5" allowfullscreen loading="lazy"></iframe><p>video 5</p></div>
-    </div>
-
-    <h2>Hobi</h2>
-    <div class="stikers" id="bHobi"><span class="stiker">Gym 💪</span></div>
-
-    <div class="gym-area">
-      <label class="frame-gym" id="frameGym" tabindex="0" for="inputFotoGym">
-        <i class="tape"></i>
-        <input type="file" id="inputFotoGym" accept="image/*">
-        <div class="kotak">
-          <div class="isi"><div class="plus">+</div>tempel foto gym<br>kamu di sini!</div>
-          <img id="previewGym" alt="Foto gym">
-        </div>
-        <div class="caption">me at the gym</div>
-      </label>
-      <div class="aksi" id="aksiGym">
-        <button class="btn" type="button" id="gantiGym">Ganti foto</button>
-        <button class="btn" type="button" id="hapusGym">Hapus</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 2. FORM BIODATA ================= -->
-  <section class="page" id="form">
-    <h2>Isi biodata</h2>
-    <p class="sub">datamu bakal langsung muncul di halaman Biodata</p>
-    <form class="kertas" id="formBiodata">
-      <i class="tape"></i>
-      <div class="field"><label for="fNama">Nama lengkap</label><input type="text" id="fNama" required placeholder="contoh: Riefa Andrianie"></div>
-      <div class="baris">
-        <div class="field"><label for="fTempat">Tempat lahir</label><input type="text" id="fTempat" required></div>
-        <div class="field"><label for="fTgl">Tanggal lahir</label><input type="date" id="fTgl" required></div>
-      </div>
-      <div class="field">
-        <span class="lbl">Jenis kelamin</span>
-        <div class="pilihan">
-          <label><input type="radio" name="jk" value="Perempuan" checked> Perempuan</label>
-          <label><input type="radio" name="jk" value="Laki-laki"> Laki-laki</label>
-        </div>
-      </div>
-      <div class="field"><label for="fAlamat">Alamat</label><textarea id="fAlamat" required></textarea></div>
-      <div class="baris">
-        <div class="field"><label for="fEmail">Email</label><input type="email" id="fEmail" required></div>
-        <div class="field"><label for="fHp">No. HP</label><input type="tel" id="fHp" placeholder="08xxxxxxxxxx"></div>
-      </div>
-      <div class="field"><label for="fHobi">Hobi (pisahkan pakai koma)</label><input type="text" id="fHobi" placeholder="gym, nonton, masak"></div>
-      <button class="btn utama" type="submit">Simpan biodata</button>
-    </form>
-  </section>
-
-  <!-- ================= 3. SURVEI OVO ================= -->
-  <section class="page" id="survei">
-    <h2>Survei kepuasan OVO</h2>
-    <p class="sub">kasih bintang sesuai pengalamanmu pakai aplikasi OVO</p>
-    <form class="kertas" id="formSurvei">
-      <i class="tape"></i>
-      <div class="field"><label for="sNama">Nama (boleh dikosongin)</label><input type="text"
+      <div
