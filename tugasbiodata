@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halaman Riefa — Data Survei</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== PENGATURAN WARNA ===== */
+:root {
+  --bg: #ffe3d3; --dot: #ffcdbb; --pink: #ff9fb8; --pink-deep: #d9577d;
+  --cream: #fff8f1; --butter: #ffe9a8; --ink: #6b2f45;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Fredoka', 'Comic Sans MS', sans-serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--dot) 2.5px, transparent 2.5px);
+  background-size: 22px 22px;
+  padding: 24px 16px 70px;
+}
+.wrap { max-width: 960px; margin: auto; }
+
+/* ===== JUDUL ===== */
+.judul { text-align: center; margin-bottom: 24px; }
+.judul h1 {
+  display: inline-block; font-size: 2.2rem; font-weight: 600;
+  background: var(--pink); color: #fff; padding: 8px 30px;
+  border: 4px solid var(--ink); border-radius: 40px 50px 44px 52px;
+  box-shadow: 6px 6px 0 var(--ink); transform: rotate(-2deg);
+}
+.sub {
+  font-family: 'Caveat', cursive; font-size: 1.6rem;
+  color: var(--pink-deep); margin: 14px 0 18px; text-align: center;
+}
+
+/* ===== JUDUL SEKSI ===== */
+h2 {
+  display: inline-block; font-family: 'Caveat', cursive; font-size: 2rem;
+  background: var(--butter); padding: 0 18px; border: 3px solid var(--ink);
+  border-radius: 14px; margin: 34px 0 18px; transform: rotate(-1.5deg);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+h2:first-of-type { margin-top: 6px; }
+
+/* ===== TOMBOL KE GOOGLE FORM ===== */
+.tombol-area { text-align: center; margin: 10px 0 8px; }
+.btn-form {
+  display: inline-block; text-decoration: none;
+  font-family: inherit; font-size: 1.15rem; font-weight: 600;
+  background: var(--pink-deep); color: #fff;
+  padding: 14px 40px; border: 3px solid var(--ink); border-radius: 40px;
+  box-shadow: 5px 5px 0 var(--ink); transition: transform .15s;
+}
+.btn-form:hover { transform: translateY(-3px) rotate(-1deg); }
+.btn-form:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+
+/* ===== KERTAS PEMBUNGKUS WINDOW ===== */
+.kertas {
+  position: relative; background: var(--cream); border: 3px solid var(--ink);
+  border-radius: 8px 26px 8px 26px; padding: 16px; box-shadow: 6px 6px 0 var(--pink);
+  margin-bottom: 10px;
+}
+.kertas iframe {
+  display: block; width: 100%; border: 3px solid var(--ink);
+  border-radius: 14px; background: #fff;
+}
+
+@media (max-width: 640px) {
+  .judul h1 { font-size: 1.7rem; }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- ===== JUDUL ===== -->
+  <div class="judul"><h1>Halaman Riefa</h1></div>
+  <p class="sub">isi formnya, lihat hasilnya di sini juga 💖</p>
+
+  <!-- =====================================================
+       1. TOMBOL KE GOOGLE FORM
+       Ganti href="..." kalau mau pakai link form lain
+       ===================================================== -->
+  <div class="tombol-area">
+    <a class="btn-form" href="https://docs.google.com/forms/d/e/1FAIpQLSc6gN1g_Mi25hTYS3z_6q-XRhh_cKiS1nFU1mP35lHQoNQmnw/viewform?usp=dialog"
+       target="_blank" rel="noopener">
+      ✏️ Isi Form Biodata
+    </a>
+  </div>
+
+  <!-- =====================================================
+       2. WINDOW SPREADSHEET HASIL PENGISIAN
+       Ganti src="..." kalau mau pakai spreadsheet lain
+       (pakai link publik yang berakhiran /pubhtml)
+       ===================================================== -->
+  <h2>Hasil pengisian</h2>
+  <p class="sub">data yang masuk dari form bakal muncul di tabel ini</p>
+
+  <div class="kertas">
+    <iframe
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5l5wNE60o7g_1YBmJB8TqiyJ7608fHqeQJ8CDVmEB-yA2OBnG8II5IZ2jVS8HJnJL9l8Hg93UVW_M/pubhtml?widget=true&amp;headers=false"
+      width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"
+      title="Spreadsheet Hasil Pengisian" loading="lazy">
+      Memuat…
+    </iframe>
+  </div>
+
+  <!-- =====================================================
+       3. WINDOW LOOKER STUDIO
+       UBAH DI SINI: ganti GANTI_DENGAN_ID_LAPORAN dengan ID
+       laporan Looker Studio kamu.
+       Cara ambil link embed:
+       1. Buka laporan di Looker Studio
+       2. Klik ⋮ (More) > Embed report
+       3. Salin link yang muncul (berbentuk
+          https://lookerstudio.google.com/embed/reporting/XXXXX/...)
+       ===================================================== -->
+  <h2>Dashboard Looker Studio</h2>
+  <p class="sub">visualisasi data dari hasil pengisian form</p>
+
+  <div class="kertas">
+    <iframe
+      src="https://lookerstudio.google.com/embed/reporting/GANTI_DENGAN_ID_LAPORAN/page/XXXX"
+      width="100%" height="700" frameborder="0" style="border:0" allowfullscreen
+      title="Dashboard Looker Studio" loading="lazy">
+      Memuat…
+    </iframe>
+  </div>
+
+</div>
+</body>
+</html>
