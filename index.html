@@ -156,6 +156,18 @@ h2:first-of-type { margin-top: 6px; }
 .aksi { display: none; flex-direction: column; gap: 10px; }
 .aksi.tampil { display: flex; }
 
+/* ---------- bingkai embed (spreadsheet, dashboard, formulir) ---------- */
+.embed {
+  border: 4px solid var(--ink); border-radius: 26px; background: var(--pink);
+  padding: 12px; box-shadow: 6px 6px 0 var(--ink);
+}
+.embed iframe {
+  display: block; width: 100%; height: 480px; border: 3px solid var(--ink);
+  border-radius: 16px; background: var(--cream);
+}
+.embed.tinggi iframe { height: 640px; }
+.embed .buka { text-align: center; margin-top: 12px; }
+
 /* ---------- tombol ---------- */
 .btn {
   display: inline-block; font-family: inherit; font-size: 1rem; font-weight: 500; padding: 9px 24px;
@@ -259,9 +271,9 @@ h2:first-of-type { margin-top: 6px; }
     <div class="tv-wrap">
       <div class="tv"><video src="Vid halaman.mp4" controls preload="metadata"></video><p>video 1</p></div>
       <div class="tv"><video src="vid kolam.mp4" controls preload="metadata"></video><p>video 2</p></div>
-      <div class="tv"><iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Video 3" allowfullscreen loading="lazy"></iframe><p>video 3</p></div>
-      <div class="tv"><iframe src="https://www.youtube.com/embed/VIDEO_ID_4" title="Video 4" allowfullscreen loading="lazy"></iframe><p>video 4</p></div>
-      <div class="tv"><iframe src="https://www.youtube.com/embed/VIDEO_ID_5" title="Video 5" allowfullscreen loading="lazy"></iframe><p>video 5</p></div>
+      <div class="tv"><video src="COOKING.mp4" controls preload="metadata"></video><p>cooking</p></div>
+      <div class="tv"><video src="PANTAI.mp4" controls preload="metadata"></video><p>pantai</p></div>
+      <div class="tv"><video src="TANJUNG_DEWA.mp4" controls preload="metadata"></video><p>tanjung dewa</p></div>
     </div>
 
     <!-- =====================================================
@@ -271,16 +283,16 @@ h2:first-of-type { margin-top: 6px; }
          ===================================================== -->
     <h2>Hobi</h2>
     <div class="gym-area">
-      <label class="frame-gym" id="frameGym" tabindex="0" for="inputFotoGym">
+      <label class="frame-gym terisi" id="frameGym" tabindex="0" for="inputFotoGym">
         <i class="tape"></i>
         <input type="file" id="inputFotoGym" accept="image/*">
         <div class="kotak">
           <div class="isi"><div class="plus">+</div>tempel foto hobimu<br>di sini!</div>
-          <img id="previewGym" alt="Foto hobi">
+          <img id="previewGym" src="gym.jpg" alt="Foto hobi">
         </div>
         <div class="caption">me at the gym 💪</div>
       </label>
-      <div class="aksi" id="aksiGym">
+      <div class="aksi tampil" id="aksiGym">
         <button class="btn" type="button" id="gantiGym">Ganti foto</button>
         <button class="btn" type="button" id="hapusGym">Hapus</button>
       </div>
@@ -294,9 +306,29 @@ h2:first-of-type { margin-top: 6px; }
        ===================================================== -->
   <section class="halaman" id="tugas2">
     <div class="judul"><h1>Tugas 2</h1></div>
-    <p class="sub">halaman ini siap diisi ✏️</p>
-    <h2>Isi tugas</h2>
-    <div class="isi-tugas"><i class="tape"></i>Tulis isi Tugas 2 di sini.</div>
+    <p class="sub">spreadsheet, dashboard &amp; formulir 📊</p>
+
+    <!-- SPREADSHEET — pastikan akses Google Sheets: "Siapa saja yang memiliki link" -->
+    <h2>Spreadsheet</h2>
+    <div class="embed">
+      <iframe src="https://docs.google.com/spreadsheets/d/1XRpX3Woehmpjgj1FNWTEkJ0bldOe3mI0vdVusNw-74k/edit?usp=sharing&amp;rm=minimal" title="Spreadsheet" loading="lazy"></iframe>
+      <div class="buka"><a class="btn" href="https://docs.google.com/spreadsheets/d/1XRpX3Woehmpjgj1FNWTEkJ0bldOe3mI0vdVusNw-74k/edit?usp=sharing" target="_blank" rel="noopener">Buka spreadsheet ↗</a></div>
+    </div>
+
+    <!-- DASHBOARD LOOKER STUDIO (Data Studio) -->
+    <h2>Dashboard</h2>
+    <div class="embed">
+      <iframe src="https://datastudio.google.com/embed/reporting/94f69665-f07e-4fa6-99c0-1d620e0cba49/page/page_12345" title="Dashboard" allowfullscreen loading="lazy"></iframe>
+      <div class="buka"><a class="btn" href="https://datastudio.google.com/embed/reporting/94f69665-f07e-4fa6-99c0-1d620e0cba49/page/page_12345" target="_blank" rel="noopener">Buka dashboard ↗</a></div>
+    </div>
+
+    <!-- GOOGLE FORM -->
+    <h2>Formulir</h2>
+    <div class="embed tinggi">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6gN1g_Mi25hTYS3z_6q-XRhh_cKiS1nFU1mP35lHQoNQmnw/viewform?embedded=true" title="Formulir" loading="lazy">Memuat…</iframe>
+      <div class="buka"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc6gN1g_Mi25hTYS3z_6q-XRhh_cKiS1nFU1mP35lHQoNQmnw/viewform?usp=header" target="_blank" rel="noopener">Buka formulir ↗</a></div>
+    </div>
+
     <div class="pusat"><a class="btn" href="#beranda">← Kembali ke beranda</a></div>
   </section>
 
@@ -305,9 +337,29 @@ h2:first-of-type { margin-top: 6px; }
        ===================================================== -->
   <section class="halaman" id="tugas3">
     <div class="judul"><h1>Tugas 3</h1></div>
-    <p class="sub">halaman ini siap diisi ✏️</p>
-    <h2>Isi tugas</h2>
-    <div class="isi-tugas"><i class="tape"></i>Tulis isi Tugas 3 di sini.</div>
+    <p class="sub">spreadsheet, dashboard &amp; formulir 📊</p>
+
+    <!-- SPREADSHEET — pastikan akses Google Sheets: "Siapa saja yang memiliki link" -->
+    <h2>Spreadsheet</h2>
+    <div class="embed">
+      <iframe src="https://docs.google.com/spreadsheets/d/1XSdV3AMT0C-kiInQfpKmamGAk9OxBbX_NnsQWTSH-LM/edit?usp=sharing&amp;rm=minimal" title="Spreadsheet" loading="lazy"></iframe>
+      <div class="buka"><a class="btn" href="https://docs.google.com/spreadsheets/d/1XSdV3AMT0C-kiInQfpKmamGAk9OxBbX_NnsQWTSH-LM/edit?usp=sharing" target="_blank" rel="noopener">Buka spreadsheet ↗</a></div>
+    </div>
+
+    <!-- DASHBOARD LOOKER STUDIO (Data Studio) -->
+    <h2>Dashboard</h2>
+    <div class="embed">
+      <iframe src="https://datastudio.google.com/embed/reporting/23088692-e81c-47ea-b259-b16710ec0437/page/page_12345" title="Dashboard" allowfullscreen loading="lazy"></iframe>
+      <div class="buka"><a class="btn" href="https://datastudio.google.com/embed/reporting/23088692-e81c-47ea-b259-b16710ec0437/page/page_12345" target="_blank" rel="noopener">Buka dashboard ↗</a></div>
+    </div>
+
+    <!-- GOOGLE FORM -->
+    <h2>Formulir</h2>
+    <div class="embed tinggi">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScO7eUgC8AOdzCMy3x-d1QMlW6zpFqgt01xDymJW6nmF5ie2g/viewform?embedded=true" title="Formulir" loading="lazy">Memuat…</iframe>
+      <div class="buka"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScO7eUgC8AOdzCMy3x-d1QMlW6zpFqgt01xDymJW6nmF5ie2g/viewform?usp=header" target="_blank" rel="noopener">Buka formulir ↗</a></div>
+    </div>
+
     <div class="pusat"><a class="btn" href="#beranda">← Kembali ke beranda</a></div>
   </section>
 
@@ -316,9 +368,29 @@ h2:first-of-type { margin-top: 6px; }
        ===================================================== -->
   <section class="halaman" id="tugas4">
     <div class="judul"><h1>Tugas 4</h1></div>
-    <p class="sub">halaman ini siap diisi ✏️</p>
-    <h2>Isi tugas</h2>
-    <div class="isi-tugas"><i class="tape"></i>Tulis isi Tugas 4 di sini.</div>
+    <p class="sub">spreadsheet, dashboard &amp; formulir 📊</p>
+
+    <!-- SPREADSHEET — pastikan akses Google Sheets: "Siapa saja yang memiliki link" -->
+    <h2>Spreadsheet</h2>
+    <div class="embed">
+      <iframe src="https://docs.google.com/spreadsheets/d/1iJxqBhQd6bqfLelxX_17cJ6K3ViY5LAZiMxXyVIWyBk/edit?usp=sharing&amp;rm=minimal" title="Spreadsheet" loading="lazy"></iframe>
+      <div class="buka"><a class="btn" href="https://docs.google.com/spreadsheets/d/1iJxqBhQd6bqfLelxX_17cJ6K3ViY5LAZiMxXyVIWyBk/edit?usp=sharing" target="_blank" rel="noopener">Buka spreadsheet ↗</a></div>
+    </div>
+
+    <!-- DASHBOARD LOOKER STUDIO (Data Studio) -->
+    <h2>Dashboard</h2>
+    <div class="embed">
+      <iframe src="https://datastudio.google.com/embed/reporting/fddf0791-0d23-4a2e-9bad-742ba381d61b/page/page_12345" title="Dashboard" allowfullscreen loading="lazy"></iframe>
+      <div class="buka"><a class="btn" href="https://datastudio.google.com/embed/reporting/fddf0791-0d23-4a2e-9bad-742ba381d61b/page/page_12345" target="_blank" rel="noopener">Buka dashboard ↗</a></div>
+    </div>
+
+    <!-- GOOGLE FORM -->
+    <h2>Formulir</h2>
+    <div class="embed tinggi">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBl3TAruDe9nd4_D8AjIp1T8NL0pKdwsjf5KynoVKVHCZXDw/viewform?embedded=true" title="Formulir" loading="lazy">Memuat…</iframe>
+      <div class="buka"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeBl3TAruDe9nd4_D8AjIp1T8NL0pKdwsjf5KynoVKVHCZXDw/viewform?usp=header" target="_blank" rel="noopener">Buka formulir ↗</a></div>
+    </div>
+
     <div class="pusat"><a class="btn" href="#beranda">← Kembali ke beranda</a></div>
   </section>
 
